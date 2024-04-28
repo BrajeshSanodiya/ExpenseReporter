@@ -1,6 +1,12 @@
-import 'package:expense_reporter/widgets/expenses.dart';
+import 'package:expense_reporter/splash.dart';
 import 'package:flutter/material.dart';
+//import 'package:package_info_plus/package_info_plus.dart';
 
 void main() {
-  runApp(const MaterialApp(home: Expenses()));
+
+  String textVersion = "1.0.0";
+  // final packageInfo = await PackageInfo.fromPlatform();
+  // textVersion = "App version: V${packageInfo.version}";
+
+  runApp(MaterialApp(home: SplashScreen(txtVersion:textVersion)));
 }
