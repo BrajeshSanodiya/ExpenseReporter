@@ -1,4 +1,5 @@
 import 'package:expense_reporter/models/expense.dart';
+import 'package:expense_reporter/widgets/chart/chart.dart';
 import 'package:expense_reporter/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_reporter/widgets/new_expenses.dart';
 import 'package:flutter/material.dart';
@@ -97,7 +98,10 @@ class _ExpensesState extends State<Expenses> {
           ],
         ),
         body: Column(
-          children: [const Text("data"), Expanded(child: mainContent)],
+          children: [
+          Chart(expenses: _registerExpenses), 
+          Expanded(child: mainContent)
+          ],
         ));
   }
 }
