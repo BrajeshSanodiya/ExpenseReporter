@@ -19,10 +19,10 @@ class _NewExpensesState extends State<NewExpenses> {
   Category selectedCategory = Category.food;
 
   Future<void> _presentDatePicker() async {
-    final lastDate = DateTime.now();
-    final firstDate = DateTime(lastDate.year - 1, lastDate.month, lastDate.day);
+    final now = DateTime.now();
+    final firstDate = DateTime(now.year - 1, now.month, now.day);
     final pickedDate = await showDatePicker(
-        context: context, firstDate: firstDate, lastDate: lastDate);
+        context: context, initialDate: now, firstDate: firstDate, lastDate: now);
     setState(() {
       selectedDate = pickedDate;
     });

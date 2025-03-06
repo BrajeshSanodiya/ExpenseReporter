@@ -13,9 +13,9 @@ class ExpensesItem extends StatelessWidget {
           const EdgeInsets.symmetric(horizontal: 20, vertical: 16), //.all(8.0),
       child: Column(
         children: [
-          Text(expense.title),
+          Text(expense.title,textAlign: TextAlign.left,),
           const SizedBox(
-            height: 4,
+            height: 6,
           ),
           Row(
             children: [

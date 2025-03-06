@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image.asset('assets/images/app_logo.png'),
             ),
             Positioned(
-                right: MediaQuery.of(context).size.width * 0.18,
+                right: MediaQuery.of(context).size.width * 0.10,
                 bottom: MediaQuery.of(context).size.height * 0.10,
                 child: const Text(
                   'Expense Reporter',
