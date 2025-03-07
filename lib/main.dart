@@ -4,20 +4,22 @@ import 'package:flutter/material.dart';
 
 
 
-var kColorScheme = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 138, 88, 214));
+var kColorScheme = ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 151, 116, 233));
 
 var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
   seedColor: const Color.fromARGB(255, 85, 144, 153));
 void main() {
   String textVersion = "1.0.0";
-  // final packageInfo = await PackageInfo.fromPlatform();
-  // textVersion = "App version: V${packageInfo.version}";
-
-
-runApp(MaterialApp(
-
-
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations(
+  //   [
+  //     DeviceOrientation.portraitUp
+  //   ]
+  // ).then((value) {
+    
+runApp(
+  MaterialApp(
   darkTheme: ThemeData.dark().copyWith(colorScheme: kDarkColorScheme,
    cardTheme: const CardTheme().copyWith(
       color: kDarkColorScheme.secondaryContainer,
@@ -54,5 +56,12 @@ runApp(MaterialApp(
     )
   ),
   themeMode: ThemeMode.system,
-  home: SplashScreen(txtVersion: textVersion)));
+  home: SplashScreen(txtVersion: textVersion))
+  );
+
+  //},);
+
+  // final packageInfo = await PackageInfo.fromPlatform();
+  // textVersion = "App version: V${packageInfo.version}";
+
 }
