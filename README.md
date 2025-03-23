@@ -1,4 +1,4 @@
-# expense_reporter
+# Expense Reporter - Flutter Project
 
 A new Flutter project.
 
